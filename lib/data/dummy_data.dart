@@ -405,7 +405,7 @@ const dummyMeals = [
     affordability: Affordability.luxurious,
     complexity: Complexity.simple,
     imageUrl:
-        'https://cdn.pixabay.com/photo/2018/04/09/18/26/asparagus-3304997_1280.jpg',
+        'https://nomoneynotime.com.au/uploads/recipes/shutterstock_394819696-1.jpg',
     duration: 30,
     ingredients: [
       'White and Green Asparagus',
@@ -432,7 +432,7 @@ const dummyMeals = [
     id: 'm11',
     categories: ['c11', 'c1'],
     title: 'Spaghetti Carbonara',
-    imageUrl: 'https://example.com/spaghetti.jpg',
+    imageUrl: 'https://www.fifteenspatulas.com/wp-content/uploads/2012/03/Spaghetti-Carbonara-Fifteen-Spatulas-12.jpg',
     ingredients: [
       '200g Spaghetti',
       '100g Bacon',
@@ -459,7 +459,7 @@ const dummyMeals = [
     id: 'm12',
     categories: ['c7','c12'],
     title: 'Avocado Toast',
-    imageUrl: 'https://example.com/avocado-toast.jpg',
+    imageUrl: 'https://images.contentstack.io/v3/assets/bltcedd8dbd5891265b/blt930fff3a52edf07c/67b3bf51254c9b71e1ead817/avocado-toast-recipe.jpg?q=70&width=3840&auto=webp',
     ingredients: [
       '1 Slice Whole Grain Bread',
       '1 Avocado',
@@ -484,7 +484,7 @@ const dummyMeals = [
     id: 'm13',
     categories: ['c13', 'c6'],
     title: 'Grilled Salmon with Asparagus',
-    imageUrl: 'https://example.com/salmon.jpg',
+    imageUrl: 'https://images.getrecipekit.com/20240610185627-air-fried-wild-salmon-and-asparagus.webp?width=650&quality=90&',
     ingredients: [
       '200g Salmon Fillet',
       '100g Asparagus',
@@ -511,7 +511,7 @@ const dummyMeals = [
     id: 'm14',
     categories: ['c14','c5','c7'],
     title: 'Vegan Buddha Bowl',
-    imageUrl: 'https://example.com/buddha-bowl.jpg',
+    imageUrl: 'https://www.sunglowkitchen.com/wp-content/uploads/2023/03/tofu-buddha-bowls-peanut-sauce-8-1.jpg',
     ingredients: [
       'Quinoa',
       'Chickpeas',
@@ -538,7 +538,7 @@ const dummyMeals = [
     id: 'm15',
     categories: ['c15','c4'],
     title: 'Steak with Mashed Potatoes',
-    imageUrl: 'https://example.com/steak.jpg',
+    imageUrl: 'https://rachaelsgoodeats.com/wp-content/uploads/2023/06/IMG_3163-819x1024.jpg',
     ingredients: [
       '250g Ribeye Steak',
       'Potatoes',
