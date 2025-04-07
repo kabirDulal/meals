@@ -17,7 +17,7 @@ class MealItem extends StatelessWidget {
         meal.affordability.name.substring(1);
   }
 
-  void _selectImage(BuildContext context) {
+  void _selectMeal(BuildContext context) {
     Navigator.push(
         context, MaterialPageRoute(builder: (ctx) => MealDetails(meal: meal)));
   }
@@ -31,7 +31,7 @@ class MealItem extends StatelessWidget {
       elevation: 10,
       child: InkWell(
         onTap: () {
-          _selectImage(context);
+          _selectMeal(context);
         },
         child: Stack(
           children: [
