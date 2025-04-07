@@ -32,17 +32,18 @@ class MealDetails extends StatelessWidget {
                 )),
           ),
           const SizedBox(
-            height: 10,
+            height: 14,
           ),
           Text(
             'Ingredients',
             style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                  color: Theme.of(context).colorScheme.onSurface,
+                  color: Theme.of(context).colorScheme.primary,
+                  fontWeight: FontWeight.bold
                 ),
             textAlign: TextAlign.center,
           ),
           const SizedBox(
-            height: 5,
+            height: 14,
           ),
           for (final ingredient in meal.ingredients)
             Text(
@@ -52,6 +53,30 @@ class MealDetails extends StatelessWidget {
                   .bodyMedium!
                   .copyWith(color: Theme.of(context).colorScheme.onSurface),
               textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 20,),
+            Text(
+            'Steps',
+            style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                  color: Theme.of(context).colorScheme.primary,
+                  fontWeight: FontWeight.bold
+                ),
+            textAlign: TextAlign.center,
+          ),
+           const SizedBox(
+            height: 14,
+          ),
+          for (final step in meal.steps)
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+              child: Text(
+                step,
+                style: Theme.of(context)
+                    .textTheme
+                    .bodyMedium!
+                    .copyWith(color: Theme.of(context).colorScheme.onSurface),
+                textAlign: TextAlign.left,
+              ),
             ),
         ],
       ),
