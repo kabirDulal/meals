@@ -68,14 +68,14 @@ class MealDetails extends StatelessWidget {
           ),
           for (final step in meal.steps)
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+              padding: const EdgeInsets.symmetric(vertical: 5),
               child: Text(
                 step,
                 style: Theme.of(context)
                     .textTheme
                     .bodyMedium!
                     .copyWith(color: Theme.of(context).colorScheme.onSurface),
-                textAlign: TextAlign.left,
+                textAlign: TextAlign.center,
               ),
             ),
         ],
