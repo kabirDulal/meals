@@ -33,6 +33,14 @@ class _TabsScreenState extends State<TabsScreen> {
         )),
     );
   }
+  void _navigteToOnSelectScreen(String identifier){
+    if(identifier == 'filters'){
+
+    }
+    else{
+      Navigator.pop(context);
+    }
+  }
   final List<Meal> _favouriteMeals = [];
   void _toggleSelectedFavroiteMeal(Meal meal) {
     final isExisting = _favouriteMeals.contains(meal);
@@ -69,7 +77,7 @@ class _TabsScreenState extends State<TabsScreen> {
         ),
         backgroundColor: Theme.of(context).colorScheme.onSecondary,
       ),
-      drawer: const MainDrawer(),
+      drawer: MainDrawer(onSelectScreen: _navigteToOnSelectScreen,),
       body: activePage,
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: const Color.fromARGB(57, 240, 154, 148),
