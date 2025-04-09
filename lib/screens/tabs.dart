@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:meals/screens/categories.dart';
 import 'package:meals/screens/meals.dart';
 import 'package:meals/models/meal.dart';
+import 'package:meals/widgets/main_drawer.dart';
 
 class TabsScreen extends StatefulWidget {
   const TabsScreen({super.key});
@@ -18,7 +19,20 @@ class _TabsScreenState extends State<TabsScreen> {
       _selectedPageIndex = index;
     });
   }
-
+  void _showInfoMessage(String message){
+    ScaffoldMessenger.of(context).clearSnackBars();
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        backgroundColor: const Color.fromARGB(255, 139, 42, 13),
+        content: Text(message,
+        style: const TextStyle(
+          fontSize: 18,
+          fontWeight: FontWeight.w800,
+          color: Colors.white,
+        ),
+        )),
+    );
+  }
   final List<Meal> _favouriteMeals = [];
   void _toggleSelectedFavroiteMeal(Meal meal) {
     final isExisting = _favouriteMeals.contains(meal);
@@ -26,10 +40,12 @@ class _TabsScreenState extends State<TabsScreen> {
       setState(() {
         _favouriteMeals.remove(meal);
       });
+      _showInfoMessage('Meal is no longer a favourite');
     } else {
       setState(() {
         _favouriteMeals.add(meal);
       });
+      _showInfoMessage('Meal is added to favourite');
     }
   }
 
@@ -53,6 +69,7 @@ class _TabsScreenState extends State<TabsScreen> {
         ),
         backgroundColor: Theme.of(context).colorScheme.onSecondary,
       ),
+      drawer: const MainDrawer(),
       body: activePage,
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: const Color.fromARGB(57, 240, 154, 148),
