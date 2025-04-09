@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meals/screens/categories.dart';
+import 'package:meals/screens/filters.dart';
 import 'package:meals/screens/meals.dart';
 import 'package:meals/models/meal.dart';
 import 'package:meals/widgets/main_drawer.dart';
@@ -19,28 +20,31 @@ class _TabsScreenState extends State<TabsScreen> {
       _selectedPageIndex = index;
     });
   }
-  void _showInfoMessage(String message){
+
+  void _showInfoMessage(String message) {
     ScaffoldMessenger.of(context).clearSnackBars();
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        backgroundColor: const Color.fromARGB(255, 139, 42, 13),
-        content: Text(message,
-        style: const TextStyle(
-          fontSize: 18,
-          fontWeight: FontWeight.w800,
-          color: Colors.white,
-        ),
-        )),
+          backgroundColor: const Color.fromARGB(255, 139, 42, 13),
+          content: Text(
+            message,
+            style: const TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.w800,
+              color: Colors.white,
+            ),
+          )),
     );
   }
-  void _navigteToOnSelectScreen(String identifier){
-    if(identifier == 'filters'){
 
-    }
-    else{
-      Navigator.pop(context);
+  void _navigteToOnSelectScreen(String identifier) {
+    Navigator.pop(context);
+    if (identifier == 'filters') {
+      Navigator.of(context)
+          .push(MaterialPageRoute(builder: (ctx) => const FiltersScreen()));
     }
   }
+
   final List<Meal> _favouriteMeals = [];
   void _toggleSelectedFavroiteMeal(Meal meal) {
     final isExisting = _favouriteMeals.contains(meal);
@@ -77,7 +81,9 @@ class _TabsScreenState extends State<TabsScreen> {
         ),
         backgroundColor: Theme.of(context).colorScheme.onSecondary,
       ),
-      drawer: MainDrawer(onSelectScreen: _navigteToOnSelectScreen,),
+      drawer: MainDrawer(
+        onSelectScreen: _navigteToOnSelectScreen,
+      ),
       body: activePage,
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: const Color.fromARGB(57, 240, 154, 148),
